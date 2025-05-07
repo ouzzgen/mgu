@@ -65,8 +65,8 @@ func ReadFileBytes(filename string) ([]byte, error) {
     var size int64 = stats.Size()
     bytes := make([]byte, size)
 
-    bufr := bufio.NewReader(file)
-    _,err = bufr.Read(bytes)
+    bufrdr := bufio.NewReader(file)
+    _,err = bufrdr.Read(bytes)
 
     return bytes, err
 }
